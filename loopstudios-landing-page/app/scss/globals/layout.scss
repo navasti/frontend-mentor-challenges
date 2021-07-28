@@ -1,0 +1,36 @@
+@use '../util' as *;
+
+.inner {
+  padding: 0 20px;
+  @include breakpoint(desktop) {
+    padding: 0;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+.homepage {
+  height: 100vh;
+  background-image: url("../images/mobile/image-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    .menu {
+      display: none;
+    }
+  }
+
+  .content {
+    margin-top: 155px;
+    padding: 25px;
+    border: 3px solid var(--white);
+  }
+}
